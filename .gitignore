@@ -29,9 +29,9 @@ wheels/
 # Django Statik ve Media Dosyaları
 
 # local_settings.py
-# db.sqlite3
-# media/
-# staticfiles/
+ db.sqlite3
+ media/
+ staticfiles/
 
 # VS Code ve PyCharm Ayarları
 .vscode/
