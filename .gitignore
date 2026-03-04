@@ -1,0 +1,44 @@
+# Python Geçici Dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+*.so   
+# Sanal Ortam (Virtual Environment)
+.venv/
+venv/
+env/
+ENV/
+bin/
+lib/
+develop-eggs/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Veritabanı (Senin İsteğin Üzerine SQLite ÇIKARILDI - Yani Git'e EKLENECEK)
+# Eğer db.sqlite3 dosyasının gitmesini İSTEMİYORSAN başına # koyma.
+# db.sqlite3
+
+# Django Statik ve Media Dosyaları
+
+# local_settings.py
+ db.sqlite3
+ media/
+ staticfiles/
+
+# VS Code ve PyCharm Ayarları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# İşletim Sistemi Dosyaları
+.DS_Store
+Thumbs.db
