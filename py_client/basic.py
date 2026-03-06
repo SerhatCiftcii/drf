@@ -1,7 +1,8 @@
 import requests
 
-endpoint="http://localhost:8000/products/"
+endpoint = "http://localhost:8000/api/"
 
-get_reponse= requests.get(endpoint , json={"product_id":123})
+response = requests.get(endpoint)
 
-print(get_reponse.json())
+print(response.status_code)
+print(response.text)
