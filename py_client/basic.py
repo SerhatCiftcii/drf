@@ -1,8 +1,8 @@
 import requests
 
-endpoint = "http://localhost:8000/api/"
+endpoint = "http://localhost:8000/api"
 
-response = requests.get(endpoint)
+get_response = requests.post(endpoint,json={"title":"heelo"})
 
-print(response.status_code)
-print(response.text)
+print(get_response.status_code)
+print(get_response.text)
