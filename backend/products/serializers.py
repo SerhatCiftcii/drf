@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from .models import Product
+from backend.products.models import get_discount
 
 class ProductSerializer(serializers.ModelSerializer):
 
@@ -17,5 +18,8 @@ class ProductSerializer(serializers.ModelSerializer):
         ]
 
     def get_my_discount(self, obj):
-        print(obj.id)
-        return obj.get_discount()
+      if not hasattr(obj , 'id'):
+         return None
+      if not isinstance(obj,Product):
+        return None
+      return obj.get_discount()

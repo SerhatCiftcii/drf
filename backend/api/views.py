@@ -18,9 +18,12 @@ def api_views(request,*args,**kwargs):
 
 
 @api_view(['POST'])
-def api_post(request,*args,**kwargs):
-    data = request.data
-    # if model_data:
-    #     data = model_to_dict(model_data, fields=["id","title","price","sale_price"])
-       
-    return Response(data)
+def api_post(request, *args, **kwargs):
+
+    serializer = ProductSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+
+    return Response(serializer.errors, status=400)
