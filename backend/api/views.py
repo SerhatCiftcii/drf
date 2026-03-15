@@ -20,7 +20,7 @@ def api_views(request,*args,**kwargs):
 @api_view(['POST'])
 def api_post(request, *args, **kwargs):
 
-    serializer = ProductSerializer(data=request.data)
+    serializer = ProductSerializer(data=request.data)  # end de yatığım değişiklik.
 
     if serializer.is_valid():
         serializer.save()
