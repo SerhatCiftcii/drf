@@ -1,7 +1,6 @@
 
 from django.db import models
 
-
 # Create your models here.
 class Product(models.Model):
     title=models.CharField(max_length=200)
@@ -10,3 +9,6 @@ class Product(models.Model):
     @property
     def sale_price(self):
         return  "%.2f"  %(float(self.price)*0.8)
+    
+    def get_discount(self):
+        return "122"
